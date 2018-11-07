@@ -1,4 +1,5 @@
-# override
+# v-if-debug
+Component for overriding conditionals in development environments
 
 ## Project setup
 ```
