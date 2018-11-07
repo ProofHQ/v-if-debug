@@ -2,7 +2,9 @@
   <div id="app">
     Condition: {{ival}}
     <DebugIf :condition="ival">
-      Conditional debug content
+      <div slot-scope="{show}" v-if="show">
+        Conditional debug content
+      </div>
     </DebugIf>
   </div>
 </template>

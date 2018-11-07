@@ -1,8 +1,6 @@
 <template>
   <div class="debugIf">
-    <div v-if="override ? override || condition : condition">
-      <slot></slot>
-    </div>
+    <slot :show="show"></slot>
     <button v-if="DEBUG_MODE" class="debugBtn" @click="override = !override">Turn override {{override ? 'OFF' : 'ON'}}</button>
   </div>
 </template>
@@ -15,7 +13,12 @@ export default {
   data () {
     return {
       DEBUG_MODE: true,
-      override: false
+      override: null
+    }
+  },
+  computed: {
+    show () {
+      return this.override === null ? this.condition : this.override
     }
   }
 }
