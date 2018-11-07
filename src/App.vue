@@ -1,17 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    Condition: {{ival}}
+    <DebugIf :condition="ival">
+      Conditional debug content
+    </DebugIf>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import DebugIf from "./components/DebugIf"
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    DebugIf
+  },
+  data () {
+    return {
+      ival: false
+    }
   }
 }
 </script>
