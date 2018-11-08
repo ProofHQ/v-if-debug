@@ -1,8 +1,11 @@
 import Vue from "vue";
 import App from "./App.vue";
 import store from "./store";
+import DebugIf from './DebugIf.plugin'
 
 Vue.config.productionTip = false;
+
+Vue.use(DebugIf, { enable: true })
 
 new Vue({
   store,

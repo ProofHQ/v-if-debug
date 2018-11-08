@@ -76,17 +76,19 @@
     position: fixed;
     z-index: 1000000;
     bottom: 0;
-    border-top: solid 1px lighten(#0095f7, 10);
+    border-top: solid 1px lighten(#0095f7, 5);
     width: 100%;
-    background-color: lighten(#0095f7, 25);
+    padding-left: 8px;
+    background-color: lighten(#0095f7, 15);
 
     .dismiss {
       position: absolute;
-      right: 16px;
-      top: 16px;
+      right: 32px;
+      top: 24px;
       border: none;
       border-radius: 5px;
       height: 24px;
+      padding: 0 12px;
       background: white;
       color: #0095f7;
       cursor: pointer;
@@ -99,7 +101,7 @@
 
     .select {
       display: inline-block;
-      padding: 16px;
+      padding: 24px;
 
       label {
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

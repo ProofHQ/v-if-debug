@@ -16,13 +16,8 @@
 </template>
 
 <script>
-import DebugIf from "./components/DebugIf"
-
 export default {
   name: "app",
-  components: {
-    DebugIf
-  },
   data () {
     return {
       ival: false
