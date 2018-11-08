@@ -4,7 +4,10 @@
   "module": "dist/DebugIf.common.min.js",
   "unpkg": "dist/DebugIf.umd.min.js",
   "version": "0.1.0",
-  "private": true,
+  "files": [
+    "dist/*"
+  ],
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name DebugIf src/DebugIf.plugin.js",
