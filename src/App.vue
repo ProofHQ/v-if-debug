@@ -1,9 +1,15 @@
 <template>
   <div id="app">
     Condition: {{ival}}
-    <DebugIf :condition="ival">
+    <DebugIf label="First if" :condition="ival">
       <div slot-scope="{show}" v-if="show">
-        Conditional debug content
+        First if content
+      </div>
+    </DebugIf>
+    
+    <DebugIf label="Second if" :condition="ival">
+      <div slot-scope="{show}" v-if="show">
+        Second if content
       </div>
     </DebugIf>
   </div>
