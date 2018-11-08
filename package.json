@@ -1,5 +1,8 @@
 {
   "name": "v-if-debug",
+  "main": "dist/DebugIf.umd.min.js",
+  "module": "dist/DebugIf.common.min.js",
+  "unpkg": "dist/DebugIf.umd.min.js",
   "version": "0.1.0",
   "private": true,
   "scripts": {

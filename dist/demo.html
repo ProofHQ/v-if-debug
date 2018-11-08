@@ -1,0 +1,16 @@
+<title>DebugIf demo</title>
+<script src="https://unpkg.com/vue"></script>
+<script src="./DebugIf.umd.js"></script>
+<link rel="stylesheet" href="./DebugIf.css">
+
+<div id="app">
+  <demo></demo>
+</div>
+
+<script>
+new Vue({
+  components: {
+    demo: DebugIf
+  }
+}).$mount('#app')
+</script>
