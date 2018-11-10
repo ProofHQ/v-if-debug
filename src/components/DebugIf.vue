@@ -1,7 +1,7 @@
 <template>
   <div class="debugIf">
     <slot :show="show"></slot>
-    <div v-if="options.enable" class="select">
+    <div class="select">
       <label v-if="label">{{label}}</label>
       <select v-model="override">
         <option :value="null">Actual Value</option>
@@ -26,12 +26,12 @@
     },
     computed: {
       show () {
-        if (!this.options.enable) return this.condition
+        // if (!this.options.enable) return this.condition
         return this.override === null ? this.condition : this.override
       }
     },
     mounted () {
-      if (this.options.enable) {
+      // if (this.options.enable) {
         let container = document.getElementById('debug-if-container')
 
         if (!container) {
@@ -53,7 +53,7 @@
 
         this.selectRef = this.$el.getElementsByClassName('select')[0]
         container.appendChild(this.selectRef)
-      }
+      // }
     },
     destroyed () {
       this.selectRef.remove()
